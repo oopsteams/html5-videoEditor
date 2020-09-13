@@ -9,7 +9,7 @@ define(function () {
         'DEBUG' : true,
 
         'API_HOST' : window.location.host,
-        'API_PORT' : 80,
+        'API_PORT' : 8088,
 
         'WEBSOCKET_HOST' : window.location.host,
         'WEBSOCKET_PORT' : 3000,
