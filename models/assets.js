@@ -30,9 +30,15 @@ exports.read = function (data, callback) {
 
 exports.update = function (data, callback) {
     var id = data._id;
+<<<<<<< HEAD
     //delete data._id;
 	console.log("will to update assets:", data);
     db.assets.update({_id : db.ObjectId(id)}, {$set:data}, {multi : false},
+=======
+    delete data._id;
+    console.log("will to update assets:", data);
+    db.assets.update({_id : db.ObjectId(id)},{$set: data}, {multi : false},
+>>>>>>> 014d1f008732162e07dfecd642ec0e711bdeab1c
         function updateCallback(err, docs) {
             data._id = id;
             if (err) throw err;
