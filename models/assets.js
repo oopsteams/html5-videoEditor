@@ -32,7 +32,7 @@ exports.update = function (data, callback) {
     var id = data._id;
     //delete data._id;
 	console.log("will to update assets:", data);
-    db.assets.update({_id : db.ObjectId(id)}, data, {multi : false},
+    db.assets.update({_id : db.ObjectId(id)}, {$set:data}, {multi : false},
         function updateCallback(err, docs) {
             data._id = id;
             if (err) throw err;
