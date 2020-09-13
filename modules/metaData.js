@@ -63,4 +63,3 @@ var MetaData = function () {
 };
 
 exports.getMetaData = new MetaData().getMetaData;
-
