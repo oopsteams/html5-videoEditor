@@ -95,6 +95,7 @@ exports.read = function (data, callback) {
 
 exports.update = function (data, callback) {
     'use strict';
+	console.log("will to update projects:", data);
     db.projects.update({_id : db.ObjectId(data._id)}, {
         $set : {
             title        : data.title,
