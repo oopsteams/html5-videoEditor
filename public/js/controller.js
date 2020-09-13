@@ -41,6 +41,7 @@ define(['jquery', 'underscore', 'config', 'device', 'info', 'model/asset', 'mode
                 }
 
                 $('#addButton').on('click', function () {
+					console.log("currentNavigatorView:", app.currentNavigatorView)
                     if (app.currentNavigatorView === 'library') {
                         $('#fileBrowser').click();
                     }
