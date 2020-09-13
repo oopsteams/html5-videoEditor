@@ -32,6 +32,8 @@ exports.update = function (data, callback) {
     var id = data._id;
     //delete data._id;
 	console.log("will to update assets:", data);
+    callback(new Error('test'), {});
+    return;
     db.assets.update({_id : db.ObjectId(id)}, data, {multi : false},
         function updateCallback(err, docs) {
             data._id = id;
