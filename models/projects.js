@@ -2,7 +2,7 @@ var fs = require('fs'),
     wrench = require('wrench'),
     uuid = require('node-uuid'),
     mongo = require('mongojs'),
-    db = mongo.connect('/videoProjects', ['projects']),
+    db = mongo('videoProjects', ['projects']),
     assets = null,
     compositions = null;
 

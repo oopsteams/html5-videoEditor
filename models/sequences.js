@@ -1,5 +1,5 @@
 var mongo = require('mongojs'),
-    db = mongo.connect('/videoProjects', ['sequences']);
+    db = mongo('videoProjects', ['sequences']);
 
 exports.create = function (data, callback) {
     'use strict';

@@ -1,6 +1,6 @@
 var uuid = require('node-uuid'),
     mongo = require('mongojs'),
-    db = mongo.connect('/videoProjects', ['compositions']),
+    db = mongo('videoProjects', ['compositions']),
     files = null,
     sequences = null;
 

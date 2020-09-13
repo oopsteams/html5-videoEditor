@@ -1,6 +1,6 @@
 var fs = require('fs'),
     mongo = require('mongojs'),
-    db = mongo.connect('/videoProjects', ['projects', 'assets', 'compositions', 'files', 'sequences']),
+    db = mongo('videoProjects', ['projects', 'assets', 'compositions', 'files', 'sequences']),
     wrench = require('wrench');
 
 var PROJECTS_PATH = __dirname + '/../public/projects/',

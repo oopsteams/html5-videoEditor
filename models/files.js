@@ -1,5 +1,5 @@
 var mongo = require('mongojs'),
-    db = mongo.connect('/videoProjects', ['files']),
+    db = mongo('videoProjects', ['files']),
     fs = require('fs');
 
 
