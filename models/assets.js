@@ -19,6 +19,7 @@ exports.create = function (data, callback) {
 };
 
 exports.read = function (data, callback) {
+	console.log("will to read assets:", data);
     db.assets.findOne({_id : db.ObjectId(data._id)}, function onFound(err, docs) {
         console.log('ASSET.JS::FOUND', docs._id);
         if (err) throw err;
@@ -30,6 +31,7 @@ exports.read = function (data, callback) {
 exports.update = function (data, callback) {
     var id = data._id;
     delete data._id;
+	console.log("will to update assets:", data);
     db.assets.update({_id : db.ObjectId(id)}, data, {multi : false},
         function updateCallback(err, docs) {
             data._id = id;
